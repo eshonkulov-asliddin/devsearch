@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import projects, project, CreateProject, updateProject, deleteProject
-from users.views import userProfile
 
 urlpatterns = [
     path('', projects, name='projects'),
