@@ -216,5 +216,5 @@ AWS_STORAGE_BUCKET_NAME = 'devsearch-img-bucket'
 
 
 #whenever our app is deployed and uses custom domain, we the Debug = False
-if os.getcwd() == '/app':
-    DEBUG = False
+# if os.getcwd() == '/app':
+#     DEBUG = False
