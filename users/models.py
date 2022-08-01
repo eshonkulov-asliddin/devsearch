@@ -39,7 +39,7 @@ class Profile(models.Model):
         try:
             url = self.profile_image.url
         except:
-            url = '../staticfiles/images/default.jpg'   
+            url = '../static/images/default.jpg'   
         return url     
 
 
