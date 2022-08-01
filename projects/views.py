@@ -10,6 +10,9 @@ from django.contrib.auth.decorators import login_required
 
 
 
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)
+
 # Create your views here.
 def projects(request):
     projects, search_query = searchProjects(request)
@@ -43,15 +46,17 @@ def CreateProject(request):
     form = ProjectForm()
 
     if request.method == 'POST':
+        newtags = request.POST.get('newtags').replace(",", " ").split()
+
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid:
-            newtags = request.POST.get('newtags').replace(",", " ").split()
             project = form.save(commit=False)
+            project.owner = profile
+            project.save()
             for tag in newtags:
                 tag, created = Tag.objects.get_or_create(name=tag)
                 project.tags.add(tag)
-            project.owner = profile
-            project.save()
+            
             return redirect('user-account')
 
     context = {'form': form}

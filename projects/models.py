@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.db import models
 import uuid
@@ -28,7 +29,7 @@ class Project(models.Model):
         try:
             url = self.featured_image.url
         except:
-            url = '../static/images/default.jpg'   
+            url = 'https://devsearch-img-bucket.s3.us-west-2.amazonaws.com/default.jpg'   
         return url                     
 
     @property

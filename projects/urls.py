@@ -10,3 +10,5 @@ urlpatterns = [
     path('delete-project/<str:pk>/', deleteProject, name='delete-project'),
 
 ]
+
+handler404 = 'projects.views.page_not_found_view'

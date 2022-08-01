@@ -1,0 +1,15 @@
+{% load static %}
+{% include 'main.html' %}
+{% block content %}
+<!-- Main Section -->
+<main class="formPage my-xl">
+	<div class="content-box">
+		<div class="formWrapper">
+			<h1>404</h1>
+			<h4>Oops! Page Not Be Found</h4>
+			<a  href="{% url 'profiles' %}" class="btn btn--sub btn--lg  my-md">Go Back</a>
+			
+		</div>
+	</div>
+</main>
+{% endblock content %}

@@ -1,8 +1,3 @@
-from email import message
-from email.policy import default
-from platform import mac_ver
-from pydoc import ModuleScanner
-from pyexpat import model
 import uuid
 from django.db import models
 from django.contrib.auth.models import User
@@ -39,7 +34,8 @@ class Profile(models.Model):
         try:
             url = self.profile_image.url
         except:
-            url = '../static/images/default.jpg'   
+            url = 'https://devsearch-img-bucket.s3.us-west-2.amazonaws.com/profiles/user-default.png'
+
         return url     
 
 
