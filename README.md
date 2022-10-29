@@ -29,7 +29,6 @@
 
 ### Run it yourself
 ```sh
-git clone https://github.com/h4cktivist/devSearch.git
-cd devSearch
+git clone https://github.com/asliddin2002developer/devsearch.git
 pip install - r requirements.txt
 ```
