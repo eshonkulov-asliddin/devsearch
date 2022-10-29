@@ -32,3 +32,6 @@
 git clone https://github.com/asliddin2002developer/devsearch.git
 pip install - r requirements.txt
 ```
+
+# demo-link:
+https://devsearch01.herokuapp.com/
